@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Bookings = () => {
   const { id } = useParams();
@@ -25,6 +26,11 @@ const Bookings = () => {
 
     allBookings.push(details);
     localStorage.setItem("all-bookings", JSON.stringify([allBookings]));
+    Swal.fire(
+      "Confirmed..!!",
+      "Your Your ticket Booking successful",
+      "success"
+    );
   };
   return (
     <div className="w-full max-w-7xl mx-auto p-5">
@@ -108,7 +114,7 @@ const Bookings = () => {
         <input
           className="w-full p-4 bg-slate-100 hover:bg-slate-200 rounded-md"
           type="submit"
-          value="Booking now"
+          value="Confirm Your Ticket"
         />
       </form>
     </div>
