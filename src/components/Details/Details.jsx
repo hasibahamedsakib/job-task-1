@@ -25,7 +25,7 @@ const Details = () => {
       <h1 className="text-4xl py-10 text-center my-5 bg-gradient-to-r from-orange-50 to-slate-100">
         Movies Details...
       </h1>
-      <div className="flex  p-3 rounded-md border">
+      <div className=" md:flex   p-3 rounded-md border">
         <img
           src={image?.medium}
           alt=""
