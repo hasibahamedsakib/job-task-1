@@ -1,9 +1,10 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Bookings = () => {
   const { id } = useParams();
   const movies = useLoaderData();
+  const navigate = useNavigate();
 
   const allShows = [];
   movies.map((movie) => allShows.push(movie.show));
@@ -31,6 +32,7 @@ const Bookings = () => {
       "Your Your ticket Booking successful",
       "success"
     );
+    navigate("/");
   };
   return (
     <div className="w-full max-w-7xl mx-auto p-5">
